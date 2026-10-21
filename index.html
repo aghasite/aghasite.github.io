@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agha Noor Ahmed Khan | Senior Software Engineer • Cloud & Distributed Systems</title>
+  <meta name="description" content="Senior Software Engineer with 7+ years building high-throughput microservices, distributed systems, and AWS cloud infrastructure supporting 2M+ users. AWS Solutions Architect & DevOps Professional." />
+  <meta name="keywords" content="Agha Noor Ahmed Khan, Senior Software Engineer, Distributed Systems, Cloud Architecture, AWS Professional, Microservices, Python, Java, Spring Boot, Kubernetes, FAANG Engineer" />
+  <meta name="author" content="Agha Noor Ahmed Khan" />
+  <link rel="canonical" href="https://aghanoorahmedkhan.com/" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aghanoorahmedkhan.com/" />
+  <meta property="og:title" content="Agha Noor Ahmed Khan | Senior Software Engineer" />
+  <meta property="og:description" content="Senior Software Engineer with 7+ years of experience in distributed systems, microservices, and AWS cloud platforms. 2M+ MAU, 99.95% availability, AWS Pro Certified." />
+  <meta property="og:image" content="https://aghanoorahmedkhan.com/assets/headshot.jpg" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Agha Noor Ahmed Khan | Senior Software Engineer" />
+  <meta name="twitter:description" content="7+ years building scalable distributed architectures and cloud systems. AWS Pro Certified." />
+  <meta name="twitter:image" content="https://aghanoorahmedkhan.com/assets/headshot.jpg" />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Agha Noor Ahmed Khan",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://aghanoorahmedkhan.com",
+    "sameAs": [
+      "https://linkedin.com/in/aghanoor",
+      "https://github.com/aghanoorahmed",
+      "https://github.com/aghasite"
+    ],
+    "email": "mailto:aghaumair900@gmail.com",
+    "telephone": "+1-515-414-0131",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Des Moines",
+      "addressRegion": "IA",
+      "postalCode": "50311",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "Distributed Systems",
+      "Cloud Architecture",
+      "Amazon Web Services",
+      "Kubernetes",
+      "Microservices",
+      "Event-Driven Architecture",
+      "High Availability Systems"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-base: #06080d;
+      --bg-surface: #0c111a;
+      --bg-card: rgba(16, 23, 38, 0.75);
+      --bg-card-hover: rgba(23, 33, 54, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(56, 189, 248, 0.35);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --cyan: #06b6d4;
+      --cyan-glow: rgba(6, 182, 212, 0.25);
+      --violet: #8b5cf6;
+      --violet-glow: rgba(139, 92, 246, 0.25);
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(139, 92, 246, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 50% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+    }
+
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1200px, 92%); margin: 0 auto; }
+
+    /* Sticky Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(6, 8, 13, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+    .brand-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      padding: 2px;
+      display: inline-flex;
+    }
+    .brand-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      letter-spacing: 0.02em;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--text-main); }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 24px rgba(139, 92, 246, 0.4);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-highlight);
+      transform: translateY(-1px);
+    }
+    .btn-sm { padding: 6px 12px; font-size: 0.8rem; }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 50px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      color: var(--cyan);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero-gradient-text {
+      background: linear-gradient(135deg, #f8fafc 30%, #38bdf8 70%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.12rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 620px;
+    }
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      font-size: 0.82rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #cbd5e1;
+    }
+
+    /* Headshot Presentation */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .headshot-frame {
+      position: relative;
+      width: min(340px, 85vw);
+      aspect-ratio: 1;
+      border-radius: 28px;
+      padding: 6px;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.6), rgba(139, 92, 246, 0.6), rgba(16, 185, 129, 0.4));
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(6, 182, 212, 0.15);
+    }
+    .headshot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+      filter: contrast(1.03) brightness(0.98);
+    }
+    .floating-card {
+      position: absolute;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      animation: float 4s ease-in-out infinite;
+    }
+    .floating-card.card-top {
+      top: -12px;
+      left: -20px;
+    }
+    .floating-card.card-bottom {
+      bottom: -15px;
+      right: -20px;
+      animation-delay: -2s;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .floating-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    /* Recruiter Stats KPI Bar */
+    .kpi-section {
+      padding: 30px 0 60px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .kpi-item {
+      text-align: center;
+      border-right: 1px solid var(--border);
+      padding: 0 12px;
+    }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      background: linear-gradient(135deg, #ffffff, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+    .kpi-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 40px;
+    }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 650px;
+    }
+
+    /* Architecture Deep Dive */
+    .arch-section {
+      padding: 60px 0;
+    }
+    .arch-tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .arch-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .arch-tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .arch-tab-btn.active {
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .arch-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(12px);
+    }
+    .arch-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    /* Interactive Architecture Canvas */
+    .arch-visual {
+      background: #090e17;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+    }
+    .flow-diagram {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .flow-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .flow-node {
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      flex: 1;
+      text-align: center;
+      position: relative;
+      transition: all 0.2s;
+    }
+    .flow-node:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+    }
+    .node-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      display: block;
+    }
+    .node-tech {
+      font-size: 0.72rem;
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .flow-arrow {
+      color: var(--text-dim);
+      font-size: 1.1rem;
+    }
+    .flow-pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      margin-right: 6px;
+    }
+
+    .arch-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .spec-block {
+      border-left: 3px solid var(--cyan);
+      padding-left: 14px;
+    }
+    .spec-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .spec-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .spec-metrics-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .metric-pill {
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      color: #38bdf8;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    /* Experience Timeline */
+    .exp-section {
+      padding: 60px 0;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--cyan), var(--violet), rgba(255,255,255,0.05));
+    }
+    .timeline-card {
+      position: relative;
+      margin-left: 56px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: all 0.2s;
+    }
+    .timeline-card:hover {
+      border-color: var(--border-highlight);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -44px;
+      top: 32px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-base);
+      border: 3px solid var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .exp-role {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .exp-company {
+      font-size: 0.95rem;
+      color: var(--cyan);
+      font-weight: 600;
+    }
+    .exp-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      background: rgba(255,255,255,0.04);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .exp-bullet {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 18px;
+    }
+    .exp-bullet::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+    }
+    .exp-bullet strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+    .tech-stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tech-tag {
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+    }
+
+    /* Live Observability Console Component */
+    .telemetry-section {
+      padding: 50px 0;
+    }
+    .terminal-window {
+      background: #070b12;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .terminal-bar {
+      background: #0f172a;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .terminal-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .terminal-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+    .terminal-body {
+      padding: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .metric-row-terminal {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+    .terminal-metric-card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .term-metric-val {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+    .term-metric-lbl {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    /* Skills Grid */
+    .skills-section {
+      padding: 60px 0;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .skill-category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.2s;
+    }
+    .skill-category-card:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-2px);
+    }
+    .category-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .category-title-icon {
+      font-size: 1.2rem;
+    }
+    .skills-pills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      transition: all 0.15s;
+    }
+    .skill-badge:hover {
+      background: rgba(6, 182, 212, 0.12);
+      border-color: var(--cyan);
+      color: #ffffff;
+      transform: scale(1.02);
+    }
+
+    /* Education & Certs */
+    .credentials-section {
+      padding: 60px 0;
+    }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .cred-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+    .cred-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .cred-item:last-child { border-bottom: none; }
+    .cred-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .cred-title { font-size: 0.98rem; font-weight: 700; color: #ffffff; }
+    .cred-sub { font-size: 0.85rem; color: var(--cyan); }
+    .cred-inst { font-size: 0.82rem; color: var(--text-dim); }
+
+    /* Contact / Recruiter CTA Footer */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(139, 92, 246, 0.12));
+      border: 1px solid var(--border-highlight);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      text-align: center;
+      margin: 60px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .cta-banner-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 28px;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0 60px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a:hover { color: var(--text-main); }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #38bdf8;
+      border: 1px solid var(--cyan);
+      padding: 12px 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 9999;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-subtitle { margin: 0 auto 30px; }
+      .hero-badges-row { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+      .kpi-item:nth-child(3) { border-right: none; }
+      .arch-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .credentials-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .kpi-item { border-right: none !important; border-bottom: 1px solid var(--border); padding: 12px 0; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .metric-row-terminal { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <div class="brand-avatar">
+          <img src="assets/headshot.jpg" alt="Agha Noor Ahmed Khan" />
+        </div>
+        <span>Agha Noor Ahmed Khan</span>
+      </a>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Open to Senior / Staff SWE Roles</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Arsenal</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="assets/Agha_Noor_Ahmed_Khan_Resume.pdf" target="_blank" download class="btn btn-outline btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Senior Software Engineer • Cloud & Distributed Systems
+        </div>
+
+        <h1 class="hero-title">
+          Architecting resilient cloud platforms at <span class="hero-gradient-text">multi-million user scale</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Results-driven Senior Software Engineer with <strong>7+ years</strong> designing and deploying mission-critical microservices, event-driven pipelines, and AWS cloud-native systems. Reduced API response latency by 55%, supported 2M+ MAU at 99.95% availability, and cut infrastructure spend by 38%.
+        </p>
+
+        <div class="hero-badges-row">
+          <span class="hero-badge-pill">☕ Java / Spring Boot</span>
+          <span class="hero-badge-pill">🐍 Python / FastAPI</span>
+          <span class="hero-badge-pill">☸️ Kubernetes & Docker</span>
+          <span class="hero-badge-pill">☁️ AWS Solutions Architect Pro</span>
+          <span class="hero-badge-pill">⚡ Event-Driven Microservices</span>
+        </div>
+
+        <div class="hero-actions" style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="#architecture" class="btn btn-primary">
+            Explore System Architecture
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="assets/Agha_Noor_Ahmed_Khan_Resume.pdf" target="_blank" download class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume (PDF)
+          </a>
+          <button onclick="copyToClipboard('aghaumair900@gmail.com', 'Email copied to clipboard!')" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Email
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="headshot-frame">
+          <img src="assets/headshot.jpg" alt="Agha Noor Ahmed Khan" class="headshot-img" />
+          
+          <div class="floating-card card-top">
+            <div class="floating-icon" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8;">☁️</div>
+            <div>
+              <div style="font-weight: 700; color: #fff;">AWS Pro Certified</div>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">Solutions Architect & DevOps</div>
+            </div>
+          </div>
+
+          <div class="floating-card card-bottom">
+            <div class="floating-icon" style="background: rgba(16, 185, 129, 0.2); color: #34d399;">⚡</div>
+            <div>
+              <div style="font-weight: 700; color: #fff;">2M+ MAU Supported</div>
+              <div style="font-size: 0.75rem; color: var(--text-dim);">99.95% High Availability</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAANG Recruiter KPI Bar -->
+  <section class="kpi-section">
+    <div class="container">
+      <div class="kpi-grid">
+        <div class="kpi-item">
+          <div class="kpi-value">7+ YRS</div>
+          <div class="kpi-label">Production SWE</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-value">2M+</div>
+          <div class="kpi-label">Active Users</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-value">-55%</div>
+          <div class="kpi-label">Latency Reduction</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-value">-38%</div>
+          <div class="kpi-label">AWS Spend Optimized</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-value">10M+</div>
+          <div class="kpi-label">Daily Records Processed</div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-value">&lt; 8 min</div>
+          <div class="kpi-label">CI/CD Deploy Cycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Architecture Deep Dives (FAANG Focus) -->
+  <section id="architecture" class="arch-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// High-Scale Engineering</span>
+        <h2 class="section-title">System Architecture Case Studies</h2>
+        <p class="section-subtitle">Deep dive into real-world distributed architectures, latency profiles, and engineering trade-offs designed for high throughput.</p>
+      </div>
+
+      <div class="arch-tabs">
+        <button class="arch-tab-btn active" onclick="switchArchTab('queue')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          Distributed Task Queue Engine (50K+ Tasks)
+        </button>
+        <button class="arch-tab-btn" onclick="switchArchTab('microservices')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Multi-Tier 2M+ MAU Microservices Platform
+        </button>
+        <button class="arch-tab-btn" onclick="switchArchTab('vision')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Assistive Vision Real-Time Edge AI
+        </button>
+      </div>
+
+      <div class="arch-container">
+        <!-- Tab 1: Queue -->
+        <div id="tab-queue" class="arch-content">
+          <div class="arch-grid">
+            <div class="arch-visual">
+              <div style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 16px; font-family: monospace;">
+                <span class="flow-pulse"></span>CLUSTER TELEMETRY: 50,000+ CONCURRENT JOBS // ZERO LOSS
+              </div>
+              <div class="flow-diagram">
+                <div class="flow-row">
+                  <div class="flow-node">
+                    <span class="node-title">Producer Services</span>
+                    <span class="node-tech">FastAPI & Spring Boot</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-node" style="border-color: rgba(6, 182, 212, 0.4);">
+                    <span class="node-title">Event Broker</span>
+                    <span class="node-tech">Redis Streams / PubSub</span>
+                  </div>
+                </div>
+                <div style="text-align: center; color: var(--text-dim);">⬇ Consumer Group Sharding (At-Least-Once Delivery)</div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(139, 92, 246, 0.4);">
+                    <span class="node-title">Kubernetes Worker Pods</span>
+                    <span class="node-tech">EKS HPA (Scaled on Queue Lag)</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-node">
+                    <span class="node-title">Dead-Letter Queue (DLQ)</span>
+                    <span class="node-tech">Automatic Retry & Alarm</span>
+                  </div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(16, 185, 129, 0.4); flex: 2;">
+                    <span class="node-title">State & Audit Persistence</span>
+                    <span class="node-tech">Amazon Aurora PostgreSQL & Redis Caching</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="arch-specs">
+              <div class="spec-block">
+                <div class="spec-title">Scalability & Fault Tolerance</div>
+                <div class="spec-desc">Engineered auto-scaling Kubernetes worker pods on AWS EKS based on real-time Prometheus queue lag metrics rather than CPU, eliminating starvation spikes during surge hours.</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">Cost & Throughput Impact</div>
+                <div class="spec-desc">Reduced background batch processing costs by <strong>40%</strong> compared to legacy EC2 monoliths. Implemented idempotency keys preventing duplicate task execution.</div>
+                <div class="spec-metrics-tags">
+                  <span class="metric-pill">50K+ Tasks/sec</span>
+                  <span class="metric-pill">p99 &lt; 85ms</span>
+                  <span class="metric-pill">Zero Message Loss</span>
+                </div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">Tech Decisions</div>
+                <div class="spec-desc">Selected Redis Streams over standard queues for sub-millisecond consumer acknowledgement and ordered message replay in failure scenarios.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Microservices -->
+        <div id="tab-microservices" class="arch-content" style="display: none;">
+          <div class="arch-grid">
+            <div class="arch-visual">
+              <div style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 16px; font-family: monospace;">
+                <span class="flow-pulse"></span>TRAFFIC LOAD: 2.1M MONTHLY ACTIVE USERS // 99.95% AVAILABILITY
+              </div>
+              <div class="flow-diagram">
+                <div class="flow-row">
+                  <div class="flow-node">
+                    <span class="node-title">Edge Acceleration</span>
+                    <span class="node-tech">AWS CloudFront & WAF</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-node">
+                    <span class="node-title">API Gateway</span>
+                    <span class="node-tech">JWT Auth & Rate Limiting</span>
+                  </div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(6, 182, 212, 0.4);">
+                    <span class="node-title">Core Domain Services</span>
+                    <span class="node-tech">Spring Boot (Java 17)</span>
+                  </div>
+                  <div class="flow-arrow">⇄</div>
+                  <div class="flow-node" style="border-color: rgba(139, 92, 246, 0.4);">
+                    <span class="node-title">Fast Aggregator Services</span>
+                    <span class="node-tech">FastAPI (Async Python)</span>
+                  </div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(16, 185, 129, 0.4); flex: 2;">
+                    <span class="node-title">Multi-Layer Storage & Cache</span>
+                    <span class="node-tech">Redis L2 Cache (94% Hit Rate) + Aurora Multi-AZ Replicas</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="arch-specs">
+              <div class="spec-block">
+                <div class="spec-title">Latency Optimization (55% Improvement)</div>
+                <div class="spec-desc">Decoupled synchronous database round-trips via Redis caching, async request pipelining, and connection pooling tuning, dropping average response latency from 320ms to 95ms.</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">Cloud Spend Optimization (-38%)</div>
+                <div class="spec-desc">Migrated over-provisioned ECS instances to Graviton-powered task definitions with aggressive auto-scaling and spot instances for non-critical services.</div>
+                <div class="spec-metrics-tags">
+                  <span class="metric-pill">2M+ Users</span>
+                  <span class="metric-pill">99.95% SLA</span>
+                  <span class="metric-pill">-38% AWS Spend</span>
+                </div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">Zero-Downtime Deployment</div>
+                <div class="spec-desc">Engineered blue/green deployment pipelines via GitHub Actions and Terraform, shrinking deployment cycle times from 45 minutes to under 8 minutes.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Vision -->
+        <div id="tab-vision" class="arch-content" style="display: none;">
+          <div class="arch-grid">
+            <div class="arch-visual">
+              <div style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 16px; font-family: monospace;">
+                <span class="flow-pulse"></span>ACCESSIBILITY AI: 30 FPS REAL-TIME COMPUTER VISION PIPELINE
+              </div>
+              <div class="flow-diagram">
+                <div class="flow-row">
+                  <div class="flow-node">
+                    <span class="node-title">Video Feed Ingestion</span>
+                    <span class="node-tech">WebRTC / OpenCV Camera Stream</span>
+                  </div>
+                  <div class="flow-arrow">➔</div>
+                  <div class="flow-node" style="border-color: rgba(6, 182, 212, 0.4);">
+                    <span class="node-title">Spatial Landmark Extractor</span>
+                    <span class="node-tech">MediaPipe & Coordinate Normalizer</span>
+                  </div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(139, 92, 246, 0.4); flex: 2;">
+                    <span class="node-title">Temporal Sequence Classifier</span>
+                    <span class="node-tech">PyTorch Transformer & LSTM Gesture Model</span>
+                  </div>
+                </div>
+                <div class="flow-row">
+                  <div class="flow-node" style="border-color: rgba(16, 185, 129, 0.4); flex: 2;">
+                    <span class="node-title">Real-Time Synthesis</span>
+                    <span class="node-tech">Sub-30ms Text & Speech Translation for Accessibility</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="arch-specs">
+              <div class="spec-block">
+                <div class="spec-title">Edge AI for Accessibility</div>
+                <div class="spec-desc">Engineered an assistive computer vision system enabling individuals with speech and hearing impairments to communicate via real-time American Sign Language recognition.</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">Real-Time Edge Performance</div>
+                <div class="spec-desc">Optimized inference pipelines using model quantization and frame skipping heuristics to maintain 30+ FPS on edge hardware without cloud compute latency.</div>
+                <div class="spec-metrics-tags">
+                  <span class="metric-pill">30+ FPS Inference</span>
+                  <span class="metric-pill">94.8% Gesture Accuracy</span>
+                  <span class="metric-pill">OpenCV + PyTorch</span>
+                </div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-title">GitHub Project</div>
+                <div class="spec-desc">Open-source capstone repository: <a href="https://github.com/AghaNoorAhmed/AI-Capstone---Assistive-Vision" target="_blank" style="color: var(--cyan); text-decoration: underline;">AI-Capstone---Assistive-Vision</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Cluster Telemetry / Terminal Widget -->
+  <section class="telemetry-section">
+    <div class="container">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+          </div>
+          <span class="terminal-title">observability-agent@prod-aws-cluster-us-east-1:~</span>
+          <span style="font-size: 0.72rem; color: #10b981; font-family: monospace;">● LIVE HEALTHY</span>
+        </div>
+        <div class="terminal-body">
+          <div class="metric-row-terminal">
+            <div class="terminal-metric-card">
+              <div class="term-metric-val">42 ms</div>
+              <div class="term-metric-lbl">p95 API Latency</div>
+            </div>
+            <div class="terminal-metric-card">
+              <div class="term-metric-val">99.98%</div>
+              <div class="term-metric-lbl">Service Uptime (30d)</div>
+            </div>
+            <div class="terminal-metric-card">
+              <div class="term-metric-val">0.008%</div>
+              <div class="term-metric-lbl">5xx Error Rate</div>
+            </div>
+            <div class="terminal-metric-card">
+              <div class="term-metric-val">94.4%</div>
+              <div class="term-metric-lbl">Redis Cache Hit Ratio</div>
+            </div>
+          </div>
+          <div style="color: #64748b; margin-bottom: 6px;">[2026-10-21T04:44:12Z] INFO [eks-cluster-autoscaler]: Pod scaling event: 48 worker pods running across 6 availability zones.</div>
+          <div style="color: #64748b; margin-bottom: 6px;">[2026-10-21T04:44:15Z] INFO [task-dispatcher]: Redis queue consumer lag: 0.04s. Distributed lock acquisition: 0.8ms.</div>
+          <div style="color: #38bdf8;">[2026-10-21T04:44:19Z] SUCCESS: CI/CD deployment pipeline finished in 6m 42s. Zero downtime rolling update verified.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Timeline -->
+  <section id="experience" class="exp-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Track Record of Impact</span>
+        <h2 class="section-title">Production Experience</h2>
+        <p class="section-subtitle">Demonstrated record delivering high-availability cloud platforms, optimizing latency, and leading infrastructure transformations.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Role 1 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Senior Software Engineer</h3>
+              <div class="exp-company">CloudScale Technologies • Remote (USA)</div>
+            </div>
+            <span class="exp-date">Jan 2022 – Present</span>
+          </div>
+          <ul class="exp-bullets">
+            <li class="exp-bullet">Architected and engineered a microservices-based distributed platform serving <strong>2M+ monthly active users</strong> using <strong>Java, Spring Boot, Python, FastAPI, and React</strong>, improving API response times by <strong>55%</strong> through caching, async processing, and database optimization.</li>
+            <li class="exp-bullet">Designed and deployed high-availability AWS cloud infrastructure (<strong>EKS, Lambda, RDS, S3, CloudFormation</strong>) that reduced monthly cloud spend by <strong>38%</strong> while elevating system availability to <strong>99.95%</strong>.</li>
+            <li class="exp-bullet">Built and maintained end-to-end CI/CD pipelines with <strong>GitHub Actions, Docker, and Terraform</strong>, cutting deployment cycles from 45 minutes to <strong>under 8 minutes</strong> with zero-downtime rolling releases.</li>
+            <li class="exp-bullet">Led monolith-to-microservices migration to event-driven architectures, cutting mean-time-to-detect and incident response by <strong>60%</strong>.</li>
+            <li class="exp-bullet">Mentored 4 junior and mid-level engineers, conducted rigorous code reviews, and established engineering standards improving code test coverage and quality metrics by <strong>40%</strong>.</li>
+            <li class="exp-bullet">Partnered with cross-functional product and data teams to deliver scalable features driving a <strong>22% increase in user retention</strong> within six months.</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">AWS (EKS, Lambda, RDS, S3)</span>
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Software Engineer</h3>
+              <div class="exp-company">Nexora Systems • Des Moines, IA (Hybrid)</div>
+            </div>
+            <span class="exp-date">Mar 2019 – Dec 2021</span>
+          </div>
+          <ul class="exp-bullets">
+            <li class="exp-bullet">Engineered full-stack features for an enterprise multi-tenant SaaS platform using <strong>Node.js, React, PostgreSQL, and AWS</strong>, supporting <strong>500K+ enterprise users</strong> with 99.9% uptime.</li>
+            <li class="exp-bullet">Implemented high-throughput serverless data processing pipelines with <strong>AWS Lambda and S3</strong> processing <strong>10M+ records daily</strong> and reducing batch processing runtime by <strong>65%</strong>.</li>
+            <li class="exp-bullet">Designed and optimized RESTful and GraphQL APIs, slashing average latency from <strong>320ms to 95ms</strong> via strategic database indexing, query refactoring, and Redis multi-tier caching.</li>
+            <li class="exp-bullet">Developed internal developer tools and integrated third-party enterprise integrations that accelerated sprint feature delivery velocity by <strong>30%</strong> across engineering squads.</li>
+            <li class="exp-bullet">Authored comprehensive automated test suites (Jest, Supertest, PyTest) maintaining <strong>85%+ test coverage</strong>, actively leading high-traffic system design evaluations.</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">GraphQL</span>
+            <span class="tech-tag">AWS Lambda</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">Jest</span>
+            <span class="tech-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-card">
+          <div class="timeline-dot"></div>
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-role">Software Developer</h3>
+              <div class="exp-company">Horizon Digital Solutions • Des Moines, IA</div>
+            </div>
+            <span class="exp-date">Jun 2017 – Feb 2019</span>
+          </div>
+          <ul class="exp-bullets">
+            <li class="exp-bullet">Built, scaled, and maintained high-volume web applications using <strong>Java, Spring Boot, JavaScript, and MySQL</strong> for financial and logistics enterprise clients.</li>
+            <li class="exp-bullet">Created automated testing suites and CI pipelines that eliminated regression bugs and reduced production defects by <strong>45%</strong>.</li>
+            <li class="exp-bullet">Executed database schema normalization and query performance tuning, improving complex analytics report generation speed by <strong>3x</strong>.</li>
+            <li class="exp-bullet">Collaborated with enterprise stakeholders to gather requirements, deliver bi-weekly releases, and provide tier-3 production support.</li>
+          </ul>
+          <div class="tech-stack-row">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">JUnit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Arsenal -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// Core Competencies</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-subtitle">Deep expertise across modern distributed systems, cloud infrastructure, and backend engineering stacks.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">💻</span>
+            <span>Languages & Core</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">Python (Async/FastAPI)</span>
+            <span class="skill-badge">Java (Spring Boot)</span>
+            <span class="skill-badge">TypeScript</span>
+            <span class="skill-badge">Go</span>
+            <span class="skill-badge">JavaScript (ES6+)</span>
+            <span class="skill-badge">SQL (PostgreSQL/MySQL)</span>
+            <span class="skill-badge">Bash / Shell</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">☁️</span>
+            <span>Cloud & Infrastructure</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">AWS EKS & ECS</span>
+            <span class="skill-badge">AWS Lambda (Serverless)</span>
+            <span class="skill-badge">Terraform (IaC)</span>
+            <span class="skill-badge">Kubernetes & Helm</span>
+            <span class="skill-badge">Docker & Containerization</span>
+            <span class="skill-badge">CloudFormation</span>
+            <span class="skill-badge">CloudFront & API Gateway</span>
+            <span class="skill-badge">Cloudflare CDN & Workers</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">⚙️</span>
+            <span>Distributed Systems</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">Microservices Architecture</span>
+            <span class="skill-badge">Event-Driven Architecture</span>
+            <span class="skill-badge">Redis Streams & Pub/Sub</span>
+            <span class="skill-badge">RESTful APIs & GraphQL</span>
+            <span class="skill-badge">Idempotency & Retries</span>
+            <span class="skill-badge">High Availability (99.95%)</span>
+            <span class="skill-badge">System Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">🗄️</span>
+            <span>Databases & Storage</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">PostgreSQL (Aurora)</span>
+            <span class="skill-badge">Redis (Caching / Streams)</span>
+            <span class="skill-badge">DynamoDB (NoSQL)</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">AWS S3 / Lake Storage</span>
+            <span class="skill-badge">Query Indexing & Tuning</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">🚀</span>
+            <span>DevOps & Reliability</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">GitHub Actions CI/CD</span>
+            <span class="skill-badge">Jenkins Pipelines</span>
+            <span class="skill-badge">Zero-Downtime Releases</span>
+            <span class="skill-badge">Prometheus & Grafana</span>
+            <span class="skill-badge">AWS CloudWatch</span>
+            <span class="skill-badge">JUnit, PyTest, Jest</span>
+            <span class="skill-badge">Chaos Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-title">
+            <span class="category-title-icon">🖥️</span>
+            <span>Frontend & Full-Stack</span>
+          </div>
+          <div class="skills-pills-list">
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Next.js</span>
+            <span class="skill-badge">Tailwind CSS</span>
+            <span class="skill-badge">Redux / State Management</span>
+            <span class="skill-badge">HTML5 & Web Standards</span>
+            <span class="skill-badge">Web Vitals Performance</span>
+            <span class="skill-badge">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Education -->
+  <section id="credentials" class="credentials-section">
+    <div class="container">
+      <div class="credentials-grid">
+        <div class="cred-card">
+          <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">// Industry Validation</span>
+            <h3 class="section-title" style="font-size: 1.5rem;">Professional Certifications</h3>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-icon">📜</div>
+            <div>
+              <div class="cred-title">AWS Certified Solutions Architect – Professional</div>
+              <div class="cred-sub">Amazon Web Services</div>
+              <div class="cred-inst">Advanced multi-tier distributed architectures, high-availability VPC networking, cost optimization, and enterprise migration strategies.</div>
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-icon">⚙️</div>
+            <div>
+              <div class="cred-title">AWS Certified DevOps Engineer – Professional</div>
+              <div class="cred-sub">Amazon Web Services</div>
+              <div class="cred-inst">Automated provisioning, CI/CD governance, infrastructure as code (IaC), event-driven remediation, and multi-account security.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cred-card">
+          <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">// Academic Foundation</span>
+            <h3 class="section-title" style="font-size: 1.5rem;">Education</h3>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-icon">🎓</div>
+            <div>
+              <div class="cred-title">Doctor of Business Administration (DBA), Information Technology</div>
+              <div class="cred-sub">South College, Knoxville, TN</div>
+              <div class="cred-inst">Advanced research in enterprise IT strategy, distributed systems leadership, and large-scale technical architectures.</div>
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-icon">🎓</div>
+            <div>
+              <div class="cred-title">Master of Business Administration (MBA), Project Management</div>
+              <div class="cred-sub">Capella University, Minneapolis, MN</div>
+              <div class="cred-inst">Cross-functional team leadership, engineering velocity, and technical program delivery.</div>
+            </div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-icon">🎓</div>
+            <div>
+              <div class="cred-title">Bachelor of Science (B.S.), Computer Science</div>
+              <div class="cred-sub">Western Governors University, Salt Lake City, UT</div>
+              <div class="cred-inst">Algorithms, data structures, operating systems, networking protocols, and software design principles.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruiter Direct Action Banner -->
+  <section id="contact" class="container">
+    <div class="cta-banner">
+      <h2 class="cta-banner-title">Let's Connect for Senior & Staff SWE Roles</h2>
+      <p class="cta-banner-desc">Actively considering Senior / Staff Software Engineering roles across distributed systems, backend infrastructure, and cloud platform teams. Fast response within 24 hours.</p>
+
+      <div class="cta-buttons">
+        <a href="mailto:aghaumair900@gmail.com" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Me Directly
+        </a>
+        <button onclick="copyToClipboard('aghaumair900@gmail.com', 'aghaumair900@gmail.com copied to clipboard!')" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Email Address
+        </button>
+        <a href="https://linkedin.com/in/aghanoor" target="_blank" rel="noreferrer" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 1.45-1.45c0-.8-.66-1.45-1.45-1.45-.8 0-1.45.65-1.45 1.45 0 .8.65 1.45 1.45 1.45m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          LinkedIn Profile
+        </a>
+        <a href="https://github.com/aghanoorahmed" target="_blank" rel="noreferrer" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          GitHub Portfolio
+        </a>
+      </div>
+
+      <div style="margin-top: 24px; font-size: 0.82rem; color: var(--text-dim);">
+        📍 Based in Des Moines, IA • Open to Remote & Relocation for Senior / Staff SWE Roles • 📞 +1 (515) 414-0131
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div>
+        © <span id="year"></span> Agha Noor Ahmed Khan. Engineered for high performance & clean architecture.
+      </div>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/aghanoor" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/aghanoorahmed" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="assets/Agha_Noor_Ahmed_Khan_Resume.pdf" target="_blank" download>Resume PDF</a>
+        <a href="mailto:aghaumair900@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Element -->
+  <div id="toast" class="toast">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg">Copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Dynamic Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy to clipboard helper
+    function copyToClipboard(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg || 'Copied to clipboard!');
+      }).catch(err => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast(msg || 'Copied to clipboard!');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      toastMsg.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Architecture Tabs Switcher
+    function switchArchTab(tabName) {
+      const tabs = ['queue', 'microservices', 'vision'];
+      tabs.forEach(t => {
+        const el = document.getElementById('tab-' + t);
+        if (el) el.style.display = (t === tabName) ? 'block' : 'none';
+      });
+
+      const buttons = document.querySelectorAll('.arch-tab-btn');
+      buttons.forEach((btn, idx) => {
+        btn.classList.remove('active');
+      });
+
+      const activeBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(tabName));
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
