@@ -587,7 +587,7 @@ for(const [r,t,o] of [[rad*1.32,.25,.22],[rad*1.55,-.5,.12]]){const ring=new THR
 const ARCS=[];const arcMat=new THREE.LineBasicMaterial({color:'#f2d9a6',transparent:true,opacity:.35,blending:THREE.AdditiveBlending,depthWrite:false});
 function mkArc(){const a=v3[Math.floor(Math.random()*N)],b=v3[Math.floor(Math.random()*N)];if(a.distanceTo(b)<1.5)return;const mid=a.clone().add(b).multiplyScalar(.5);mid.setLength(rad+a.distanceTo(b)*.35);
   const curve=new THREE.QuadraticBezierCurve3(a.clone(),mid,b.clone());const geo=new THREE.BufferGeometry().setFromPoints(curve.getPoints(48));const line=new THREE.Line(geo,arcMat.clone());G.add(line);
-  const pk=new THREE.Sprite(new THREE.SpriteMaterial({map:dotTex,color:Math.random()<.5?'#7fe3ff':'#ffe6b0',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));pk.scale.setScalar(.22);G.add(pk);
+  const pk=new THREE.Sprite(new THREE.SpriteMaterial({map:dotTex,color:Math.random()<.5?'#7fe3ff':'#ffe6b0',transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));pk.scale.setScalar(.11);G.add(pk);
   ARCS.push({curve,line,pk,t:0,sp:.18+Math.random()*.25,life:0});}
 for(let i=0;i<14;i++)mkArc();
 let W=0,H=0;function size(){const r=cv.getBoundingClientRect();W=r.width;H=r.height;R.setSize(W,H,false);C.aspect=W/H;C.updateProjectionMatrix();const wide=W>980;G.position.set(wide?2.9:0,wide?0:-1.2,0);halo.position.copy(G.position);G.scale.setScalar(wide?1:.78);}
